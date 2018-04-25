@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Error 404 (Not Found)</title>
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            .left {
+                float: left;
+            }
+
+            .right {
+                float: right;
+            }
+
+            .code {
+                font: 14px/1.5em monospace;
+                font-feature-settings: "calt" 1;
+                /* Enable ligatures for IE 10+, Edge */
+                text-rendering: optimizeLegibility;
+                /* Force ligatures for Webkit, Blink, Gecko */
+                width: 40em;
+                margin: 5em auto;
+                white-space: pre-wrap;
+                word-break: break-all;
+                text-align: center;
+            }
+
+            .hide {
+                position: absolute!important;
+                height: 1px;
+                width: 1px;
+                overflow: hidden;
+                clip: rect(1px,1px,1px,1px);
+            }
+
+            .m0 {
+                margin: 0;
+            }
+
+            .bg-dark {
+                background-color: #353D42;
+                color: #FFFFFF;
+                padding: 1em 0 2em;
+            }
+
+            .bg-medium {
+                background-color: #F5F5F5;
+            }
+
+            .logo {
+                display: inline-block;
+                background-size: 207px 16px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+                background-origin: content-box;
+                min-height: 16px;
+                min-width: inherit;
+                width: 50%;
+            }
+
+            .logo--mayor {
+                background-image: url("https://www.london.gov.uk/sites/all/themes/gla/images/svg/logo-mayoral.svg");
+                background-position: center right;
+            }
+
+            @media (min-width: 480px) {
+                .logo--mayor {
+                    padding-right: 10px;
+                }
+            }
+
+            @media (min-width: 768px) {
+                .logo--mayor {
+                    padding-right: 20px;
+                }
+            }
+
+            .logo--assembly {
+                background-image: url("https://www.london.gov.uk/sites/all/themes/gla/images/svg/logo-assembly.svg");
+                background-position: center left;
+            }
+
+            @media (min-width: 480px) {
+                .logo--assembly {
+                    padding-left: 10px;
+                }
+            }
+
+            @media (min-width: 768px) {
+                .logo--assembly {
+                    padding-left: 20px;
+                }
+            }
+
+            .robot-footer-spacing {
+                padding-bottom: 95px;
+            }
+
+            .robot-footer {
+                background-image: url('../img/robot.gif');
+                background-repeat: no-repeat;
+                background-position-y: bottom;
+                background-size: contain;
+                height: 95px;
+                width: 100%;
+                max-width: 1024px;
+            }
+        </style>
+    </head>
+    <body class="bg-medium">
+        <header class="l-header col-12 bg-dark center mx-auto clearfix px4 line-height-0">
+            <div class="m0 px1">
+                <span class="hide">The official site of</span>
+                <a href="//london.gov.uk" class="logo logo--mayor left">
+                    <span class="hide">the Mayor of London</span>
+                </a>
+                <a href="//london.gov.uk" class="logo logo--assembly right">
+                    <span class="hide">and the London Assembly</span>
+                </a>
+            </div>
+        </header>
+        <div class="code">
+            <h1>URL not found (404 error)</h1>
+            <p id='content'></p>
+        </div>
+        <script>
+            var child = document.getElementById('content');
+            child.innerText = document.location.href
+        </script>
+        <script type="text/javascript">
+
+        window.doorbellOptions = {
+            appKey: 'gfe1AHVVGtyA7WVjj14Yb0jycuSQOMf6DoZdxJ5j7v4x7t7Km8Bg4sdTYiBgcE4o'
+        };
+        (function(w, d, t) {
+            var hasLoaded = false;
+            function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/7203?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); }
+            if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); }
+            if (d.readyState == 'complete') { l(); }
+        }(window, document, 'script'));
+
+
+        doorbellAlert = function () {
+          var message = (window.location !== window.parent.location)
+          ? document.location.href + ' :: missing\r\n\r\n' + document.referrer + ' :: referrer'
+          : document.location.href + ' :: missing'
+          if  (window.location.hostname !== 'localhost'
+            && window.location.pathname.search('404.html') === -1
+            && window.location.protocol.search('http') !== -1) {
+                doorbell.send(message, 'noreply@doorbell.io')
+          }
+        }
+
+        var checkExist = setInterval(function() {
+            try {
+              if (doorbell !== null) {
+                doorbellAlert()
+                clearInterval(checkExist)
+              }
+            } catch (e) {
+              // suppress error log
+            }
+
+         }, 300); // repeat call self every 300ms
+
+        </script>
+    </body>
+</html>

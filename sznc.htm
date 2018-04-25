@@ -1,0 +1,31 @@
+<!DOCTYPE><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+<link rel="icon" type="image/x-icon" href="web/images/favicon.ico"><title>GLA Maps</title><!-- eng.lon.natcap.around.gq -->
+<!-- ArcGIS CSS --><link rel="stylesheet" href="https://js.arcgis.com/3.21/dijit/themes/tundra/tundra.css">
+<link rel="stylesheet" href="https://js.arcgis.com/3.21/esri/css/esri.css" /><link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="web/css/sweetalert2.css" /><link rel="stylesheet" type="text/css" href="web/css/style.css" />
+<!--<link rel="stylesheet" href="web/js/rangeslider.js-2.3.0/rangeslider.css" type="text/css">-->
+<script src="web/js/sweetalert2.common.min.js"></script><script src="https://js.arcgis.com/3.21/init.js"></script>
+<!-- jQuery --><!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> --><script src="web/js/jquery-2.2.3.min.js"></script>
+<!-- <script src="web/js/jquery-ui.js"></script> --><script src="web/js/main.js"></script><!--<script src="web/js/rangeslider.js-2.3.0/rangeslider.js"></script>-->
+<!-- jQuery Popup Overlay --><!-- <script src="web/js/jquery.popupoverlay.js"></script> --><script>
+$(document).ready(function() {helperObj = new com.crono.gla.helper();$('#btn_locateme').on('click', function() {helperObj.onLocateMeClick();});
+  $('#btn_home').on('click', function() {helperObj.zoomToMaxExtent();}); $('#btn_zoomin').on('click', function() {helperObj.map.setZoom(helperObj.map.getZoom() + 1); });
+  $('#btn_zoomout').on('click', function() {helperObj.map.setZoom(helperObj.map.getZoom() - 1); });  dojo.ready(helperObj.init);  });</script><script>
+var rangeSlider = function() {var slider = $('.range-slider'), range = $('.range-slider__range'), value = $('.range-slider__value');
+  slider.each(function() {value.each(function() {var value = $(this).prev().attr('value'); $(this).html(value); });
+    range.on('input', function() {$(this).next(value).html(this.value);}); });};  rangeSlider();</script></head><body class="tundra">
+
+<header><div class="three-buttons"><span id="btn_home"><i class="fa fa-home"></i></span> <span id="btn_zoomin"><i class="fa fa-plus"></i></span> 
+                        <span id="btn_locateme"><i class="fa fa-map-marker"></i></span> <span id="btn_zoomout"><i class="fa fa-minus"></i></span></div></header>
+<!--<div class="range-slider"><input class="range-slider__range" type="range" value="100" min="0" max="500"><span class="range-slider__value">0</span></div>-->
+<div class="clear"></div><div class="map" id="map"></div><div class="clear"></div>
+<div class="panel left_panel"><div class="content"><div class="panel-heading">MAYOR OF LONDON <a href="javascript:helperObj.toggleLeftPanel();" class="tgl-btn"><i class="fa fa-minus"></i></a></div>
+  <div class="title-header">LONDON'S NATURAL CAPITAL</div><div id="left-content-wrapper" class="content-wrapper"><div class="status"><div class="sub-title">Layers</div>
+     <div><select style="width: 100%; height: 32px;" onchange="helperObj.layerSelectionChanged(this.selectedOptions[0].value);">
+		<option value="0">Sum of different green space benefits (&#163;bn)</option><option value="1">Amenity value revealed by residential property prices (&#163;m)</option>
+		<option value="2">Total value of mental health savings (&#163;m)</option><option value="3">Total value of physical health savings	(&#163;m)</option>
+		<option value="4">Total value of recreational benefits (&#163;m)</option></select></div></div>
+                <div class="status"><div class="sub-title">Legend</div><div id="legend_div"></div></div><!-- <div id="right-content-wrapper" class="content-wrapper"> -->
+                <div class="status hidden"><hr style="padding: 0px; margin: 20px 0px;"><a href="javascript:helperObj.toggleRightPanel();" class="tgl-btn"><i class="fa fa-minus"></i></a>
+                    <div class="right_panel"><div id="sub-title" class="sub-title" class="panel-heading"></div><div id="result_div"></div></div></div><!-- </div> --></div>
+      <div class="footer"><ul><li><a href="javascript:helperObj.about_map();">About</a></li><!-- <li><a href="#">Feedback</a></li> --></ul></div></div></div></body></html>

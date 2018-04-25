@@ -1,0 +1,109 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800);
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,	b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,	details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+	output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup,menu, nav, section {display: block;} body {line-height: 1;height: :auto;	width: auto;	max-width: 100%;	font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif; outline: none !important;} ol, ul {list-style: none;} blockquote, q {quotes: none}
+blockquote:before, blockquote:after, q:before, q:after {content: '';content: none}
+table {border-collapse: collapse;border-spacing: 0} .left {float: left} .right {float: right} .clear {clear: both}
+header {display: inline-block; position: absolute; top: 20px; right: 15px; z-index: 1; width: 110px; border-radius: 5px} header .logo {padding-bottom: 14px;} /* cursor: pointer; */
+}
+header .three-buttons {margin: 8px 0px 0px 30px;width: 225px}
+.three-buttons span {font-size: 18px;background: #fff;padding: 12px 15px; border-radius: 5px; color: #353d42; display: inline-block; text-align: center;transition: background-color 0.5s ease;    cursor: pointer; width: 17px; margin-bottom: 4px; box-shadow: 0px 0px 0px 2px #969696 inset}
+header .three-buttons:last-child {margin-right: 0px !important}
+/*.three-buttons span .fa-map-marker {padding: 0px 0px 0px 4px}*/
+
+.three-buttons span:hover {background: #353d42;color: #fff;box-shadow: 0px 0px 0px 2px #969696 inset}.search_result_distance{width: 100%;text-align: right;display: block;color: #FFF}.search {box-sizing: border-box;background: #FFF;padding: 1%;width: 350px;display: block;position: absolute;top: 52px;right: 0px;bottom:0;max-width: 350px;display: none;z-index: 1;overflow-x:hidden;overflow-y:auto;  }
+.search input {display: inline-block} .search label {display: inline-block;color: #fff;font-size: 14px;margin-right: 70px} .search label:last-child {margin-right: 0px}
+.search-field {display: block;margin-top: 15px;width: 100%} .search-field input[type="text"] {width: 92%;padding: 15px;background: #FFF;border: none;color: #353d42}
+.search-field input[type="text"]:focus {outline: none} .three-buttons {padding: 5px}
+.search-field input[type="button"] {width: 5%;padding: 8px;background: #fff;border: none;color: #353d42;font-size: 24px;cursor: pointer}
+.search-field input[type="button"]:hover {background: #da2125;color: #fff}
+/* .search-field ::-webkit-input-placeholder {color: #353d42;opacity: 1 !important} */
+.search-field :-moz-placeholder {color: #952b28}
+.search-field ::-moz-placeholder {color: #952b28}
+.search-field :-ms-input-placeholder {color: #952b28}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */color: #1c1e38;font-weight: bold;font-size: small}
+::-moz-placeholder { /* Firefox 19+ */color: #1c1e38;font-weight: bold;font-size: small}
+:-ms-input-placeholder { /* IE 10+ */color: #1c1e38;font-weight: bold;font-size: small}
+:-moz-placeholder { /* Firefox 18- */color: #1c1e38;font-weight: bold;font-size: small}
+header .zoom {/* width: 230px; */padding: 0px;margin: 8px 30px 0px 0px;border: none !important}
+header .postcode {width: 300px;margin-right: auto;margin-left: auto;border: 1px solid #000}.search_wrapper{position: relative}.zoom input[type=range] {-webkit-appearance: none;width: 100%;height: 8px;border-radius: 10px}
+.zoom input[type=range]:focus {outline: none !important}
+.zoom input[type=range]::-ms-track {width: 100%;cursor: pointer;background: transparent;/* Hides the slider so custom styles can be added */border-color: transparent;color: transparent}
+.hidden {display: none}
+.zoom input[type=range]::-webkit-slider-runnable-track {-webkit-appearance: none}
+.zoom input[type='range']::-webkit-slider-thumb {-webkit-appearance: none;background: url("../images/zoom-handler.png") center no-repeat #ecf0f1;border: 2px solid #353d42;width: 30px;height: 30px;border-radius: 15px;cursor: pointer;-webkit-box-shadow: 0px 2px 24px 0px rgba(50, 50, 50, 0.53);-moz-box-shadow: 0px 2px 24px 0px rgba(50, 50, 50, 0.53);box-shadow: 0px 2px 24px 0px rgba(50, 50, 50, 0.53)}
+.zoom input[type=range]::-moz-range-track {width: 100%;height: 10px;cursor: pointer;background: #fff;border-radius: 10px}
+.zoom input[type=range]:focus::-moz-range-track {outline: none !important}
+.zoom input[type=range]::-moz-range-thumb {background: url("../images/zoom-handler.png") center no-repeat #ecf0f1;border: 2px solid #353d42;width: 25px;height: 25px;border-radius: 15px;cursor: pointer;-webkit-box-shadow: 0px 2px 24px 0px rgba(50, 50, 50, 0.53);-moz-box-shadow: 0px 2px 24px 0px rgba(50, 50, 50, 0.53);box-shadow: 0px 2px 24px 0px rgba(50, 50, 50, 0.53)}
+.zoom input[type=range]::-ms-track {background-color: #fefefe;    margin: auto;    width: 40%;    box-shadow: 0px 0px 13px rgba(0,0,0,0.5);    border-radius: 10px;cursor: auto;    position: relative;    max-width: 650px}
+.zoom input[type=range]::-ms-fill-lower {background: #2a6495;border: 0.2px solid #010101;border-radius: 2.6px;box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d}
+.zoom input[type=range]:focus::-ms-fill-lower {background: #3071a9}
+.zoom input[type=range]::-ms-fill-upper {background: #3071a9;border: 0.2px solid #010101;border-radius: 2.6px;box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d}
+.zoom input[type=range]:focus::-ms-fill-upper {background: #367ebd}
+.list-popup-button {background: #d64541;color: #fff;border: 3px solid #353d42;width: 70px;height: 70px;padding: 10px;border-radius: 150px;text-align: center;display: inline-block;position: absolute;right: 2%;bottom: 3%;transition: background-color 0.5s ease;cursor: pointer;-webkit-box-shadow: 0px 2px 24px 0px rgba(50, 50, 50, 0.53);-moz-box-shadow: 0px 2px 24px 0px rgba(50, 50, 50, 0.53);box-shadow: 0px 2px 24px 0px rgba(50, 50, 50, 0.53)}
+.list-popup-button .fa {font-size: 35px;margin-top: 20px} .list-popup-button:hover {background: #353d42;color: #fff;box-shadow: 0px 0px 0px 5px white inset}
+.list-popup-button:hover .fa {font-size: 28px;margin-top: 22px}
+#slide_background {-webkit-transition: all 0.3s 0.3s;-moz-transition: all 0.3s 0.3s;transition: all 0.3s 0.3s;z-index: 3000000}
+#slide, #slide_wrapper {-webkit-transition: all 0.4s;-moz-transition: all 0.4s;transition: all 0.4s;z-index: 3000000}
+#slide {-webkit-transform: translateX(0) translateY(-40%);-moz-transform: translateX(0) translateY(-40%);-ms-transform: translateX(0) translateY(-40%);transform: translateX(0) translateY(-40%)}
+.popup_visible #slide {-webkit-transform: translateX(0) translateY(0);-moz-transform: translateX(0) translateY(0);-ms-transform: translateX(0) translateY(0);transform: translateX(0) translateY(0)}
+.popup_content {background: #ececec;padding: 20px 20px 20px 20px;position: absolute !important;z-index: 3000000;width: 470px;left: 1%;top: 80px;overflow: auto;bottom: 10px;overflow-x: hidden;outline: none !important;-webkit-box-shadow: 0px 2px 24px 0px rgba(50, 50, 50, 0.53);-moz-box-shadow: 0px 2px 24px 0px rgba(50, 50, 50, 0.53);box-shadow: 0px 2px 24px 0px rgba(50, 50, 50, 0.53)}
+.search .slide {background: #353d42;border: 1px solid #dedede;width: 100%;cursor: pointer;margin-bottom: 10px;transition: background-color 0.5s ease;display: table}
+.slide .mile {width: 16%;background: #34495e;color: #fff;margin: auto;text-align: center;padding: 10px 25px;display: table-cell;line-height: 18px;cursor: default;vertical-align: middle}
+.slide .mile .fa {color: #34495e;background: #fff;border-radius: 150px;width: 20px;height: 20px;padding: 15px;display: inline-block;margin-bottom: 10px;font-size: 20px}
+.slide .mile label {color: #fff;font-size: 14px;width: 100%;display: inline-block}
+.slide .content {padding: 5px 5px 5px 20px;color: #34495e;width: 66%;transition: background-color 0.5s ease;cursor: pointer;display: table-cell;vertical-align: middle}
+.slide .content label {width: 100%;display: inline-block;margin-bottom: 10px;cursor: pointer}
+.slide .content .heading {font-weight: 700;font-size: 18px} .slide .content .address {font-size: 14px} .slide .content .name {font-size: 14px;font-weight: 600}
+.slide:hover .content {color: #fff;background: #263645}.slide .content .address input[type="button"]{background-color: #353d42;    border: transparent;    margin: 5px 0;padding: 10px;    border-radius: 5px;    color: #fff;    cursor: pointer;float: right}.slide .content .address input[type="button"]:hover{background-color: #353d42}.selected {color: #fff !important;background: #263645 !important}
+.slide_close {background: #ef4238;border: 3px solid #fff;position: absolute !important;top: 6px;right: 5px;width: 40px;height: 40px;color: #fff;border-radius: 150px;padding: 5px;outline: none !important;transition: background-color 0.5s ease;cursor: pointer;z-index: 20000000px !important} .slide_close:hover {background: #353d42} .popup_background {background: none !important}
+.titlePane {background: #005f6f !important;padding: 30px 10px !important;height: 22px !important}
+.titlePane .title {/* font-family: 'Open Sans', sans-serif !important; */font-size: 15px !important;font-weight: 700 !important;line-height: 17px !important;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;width: 100%}
+.contentPane {/* font-family: 'Open Sans', sans-serif !important; */font-size: 13px !important;line-height: 21px !important;color: #22313f !important}
+.esriPopup.dark .esriPopupWrapper {background: #fff !important}
+.esriPopup.dark .dj_ie7 .esriPopup.dark, .esriPopup.dark .contentPane, .esriPopup.dark .actionsPane {background: #fff !important;color: #22313f !important}.pop-ftr{margin-top: 10px;border-top: 1px solid #ccc;padding-top: 5px;text-align: right}.esriPopup.dark .contentPane .btn-yes, .esriPopup.dark .contentPane .btn-no{background-color: red;border: 0;padding: 5px 15px;color: #fff;border-radius: 25px;margin: 5px;cursor: pointer}.esriPopup.dark .contentPane .btn-yes{background-color: green}.esriPopup.dark .contentPane .btn-no{background-color: red}
+.maximize, .close, .restore {background: #353d42 !important;border: 3px solid #005f6f;border-radius: 150px;padding: 10px;width: 55px;height: 55px;color: #fff;-webkit-box-shadow: 0px 2px 24px 0px rgba(50, 50, 50, 0.53);-moz-box-shadow: 0px 2px 24px 0px rgba(50, 50, 50, 0.53);box-shadow: 0px 2px 24px 0px rgba(50, 50, 50, 0.53)}
+.maximize:hover, .close:hover {background: #005f6f !important; border: 3px solid #ffffff} .maximize, .restore {right: 35px !important;top: -20px !important}
+.close {right: -10px !important;top: -20px !important} .esriSimpleSliderTL {right: 20px !important;left: auto !important}
+.esriSimpleSlider {-moz-user-select: none;background: #FFF !important;border: 3px solid #353d42 !important;border-radius: 5px;color: #353d42 !important;position: absolute;text-align: center;display: none}
+.esriSimpleSliderVertical .esriSimpleSliderIncrementButton {border-bottom: 3px solid #353d42 !important}
+.esriSimpleSliderDecrementButton:hover, .esriSimpleSliderIncrementButton:hover {background-color: #353d42 !important;background: #353d42;color: #fff;font-size: 22px;border-radius: 0px !important}
+html, body, #map {padding: 0;margin: 0;height: 100%;overflow: hidden} .esriPopup .titleButton.next {top: 45px !important} .esriPopup .titleButton.prev {top: 45px !important}
+#btn_popup {display: none}
+.search_txt {height: 36px;width: 300px;padding: 5px 55px 5px 5px}.search_btn {position: absolute; top: 0; right: 0; bottom: 0; background-color: #0137a1; border: 1px solid transparent;color: #fff; padding: 10px; width: 50px; cursor: pointer; -webkit-appearance: none;-moz-appearance: none}.search_btn:hover{background-color: #ef4238}.popup-funding-available {color: #449944;display:block;font-weight: bold;margin-bottom: 10px}
+.popup-funding-notavailable {color: #da2125;display:block;font-weight: bold}.onestop-popup-title{font-weight: bold;display:block;margin-bottom: 10px} .onestop-popup-heading {font-weight: bold}
+.popup-address {margin-bottom: 10px;display:block}.popup-info{display:block}.align-center {text-align: center}.results .noresult-found {color: #CF000F;display: block}.nav-toggle{position: absolute;z-index: 1;padding: 10px;bottom: 15px;left: 15px;border-radius: 100px;border: 2px solid #fff;cursor: pointer;color: #fff;background-color: #0137a1;outline: 0}
+.slide_close{position: absolute;z-index: 2;padding: 10px;top: 53px;right: 0px;border-radius: 100px;border: 2px solid #fff;cursor: pointer;color: #fff;background-color: #0137a1;outline: 0}
+.legend-panel{background-color: rgba(38,54,69,0.8);position: absolute;padding: 10px 15px 25px 15px;bottom: 30px;left: 30px;border: 3px solid #fff;font-size: 13px;color: #fff}.legend-panel h3{font-size: 16px;margin-bottom: 15px}.legend-text{margin-bottom: 10px;margin-left: 27px} .legend-panel .legend-text:nth-child(3n-1) {margin-left: 0}
+.chk-box{vertical-align: middle;margin-right: 10px} .legend-text:last-child{margin-bottom: 0} .legend-text img{vertical-align: middle;margin-right: 10px}
+.esriPopupMobile .titleButton.arrow{background: url(../images/icon-sprite.png) center center no-repeat #009fe3;position: absolute;top: 2px;right: 2px;width: 32px;height: 32px;border-top-right-radius: 3px;border-bottom-left-radius: 3px}
+.esriPopupMobile .titleButton.close{background: url(../images/whitex.png) no-repeat #ef4238!important;padding: 0;top: 2px!important;border: 0;left: 2px;border-radius: 0;border-top-left-radius: 3px;border-bottom-right-radius: 3px}
+.esriPopupMobile .titleButton.prev, .esriPopupMobile .titleButton.next{top: 15px} .esriMobileNavigationBar{background: #0137a1} .esriMobileInfoViewItem{padding: 5px 15px}
+.esriPopupMobile .titlePane .title{text-align: center;margin-bottom: 5px}
+/*= Panel ====*/
+.panel{position: absolute;left: 15px;top: 20px;width: 350px;background: #353d42;z-index: 10;border-radius: 4px;box-shadow: 0 0 6px #666} .right_panel{left: unset;right: 15px} 
+.panel .panel-heading{padding: 10px 0 9px;text-align: center;color: #fff}  .panel .panel-heading:after {content: "";display: table;clear: both}
+.panel .title-header{border-bottom: 1px solid #d5d5d5;padding: 14px 15px 10px;background: #e3e3e3;text-align: center;color: rgb(158, 0, 89)}
+.panel .content-wrapper{padding: 17px 15px 10px;background: white;font-size: 14px}
+.panel .sub-title{padding: 5px 8px;font-weight: bold;background: #e3e3e3;border-radius: 3px;color: rgb(158, 0, 89);margin: 10px 0;margin-bottom: 9px;border: 1px solid #bbb;}
+.panel .subtitle + div {padding-left: 3px} .panel label {display: block;cursor: pointer;position: relative;padding: 2px 0} .panel .footer{color: #fff;padding: 10px}
+.panel .footer ul li{display: inline-block;border-right: 1px solid #f5f5f5;padding: 0 5px} .panel .footer ul li:last-child{border-right: 0} 
+.panel a{text-decoration: none;color: inherit} .panel table{width: 100%;margin-bottom: 10px} .panel table td:FIRST-CHILD{width: 60%}
+.panel table td{padding: 7px 10px;border: 1px solid #e6e6e6;word-break: break-word;vertical-align: middle} .panel .tgl-btn{float: right;padding: 0 10px} 
+a.dwnld-btn{background-color: #a40d61;border-radius: 3px;color: #fff;display: inline-block;padding: 5px 10px;text-decoration: none;border: none;word-break: initial}
+.i_info{color: #353d42;cursor: pointer;float: right}
+/*== Select Ranger =*/
+.range-slider {margin: 0 120px 0 0%;position: absolute;right: 0;top: 76px;/*width: 450px;*/ z-index: 1} .range-slider {  /*width: 100%;*/}
+.range-slider__range { -webkit-appearance: none;width: calc(100% - (73px));height: 10px;border-radius: 5px;background: #94004f;outline: none;padding: 0;margin: 0}.range-slider__range::-webkit-slider-thumb { -webkit-appearance: none;  appearance: none;width: 20px;height: 20px;border-radius: 50%;background: #2c3e50;cursor: pointer;-webkit-transition: background .15s ease-in-out;transition: background .15s ease-in-out} .range-slider__range::-webkit-slider-thumb:hover {background: #1abc9c} .range-slider__range:active::-webkit-slider-thumb {background: #1abc9c}
+ .range-slider__range::-moz-range-thumb { width: 20px;height: 20px;border: 0;border-radius: 50%;background: #2c3e50;cursor: pointer;-webkit-transition: background .15s ease-in-out;transition: background .15s ease-in-out}.range-slider__range::-moz-range-thumb:hover {background: #1abc9c} .range-slider__range:active::-moz-range-thumb {background: #1abc9c}
+.range-slider__value {display: inline-block;position: relative;/*width: 60px;*/
+  color: #fff;line-height: 20px;text-align: center;border-radius: 3px;background: #2c3e50;padding: 5px 10px;margin-left: 8px}.range-slider__value:after {
+  position: absolute;top: 8px;left: -7px;width: 0;height: 0;border-top: 7px solid transparent;border-right: 7px solid #2c3e50;border-bottom: 7px solid transparent;content: ''}
+::-moz-range-track { background: #94004f;border: 0} input::-moz-focus-inner, input::-moz-focus-outer { border: 0}
+.tundra .dijitTooltipContainer{box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);background: #9f055c;color: #fff;font-size: 1.15em;font-weight: bold;position: relative;border-color: #ea108b}.tundra .dijitTooltipContainer:before { content: "";z-index: 9;position: absolute;width: 0;top: -10px;height: 0;border-left: 5px solid transparent;border-right: 5px solid transparent;border-bottom: 10px solid #9f055c;left: 5px}.data-list_div{height: calc(100vh - 520px);overflow-y: auto;overflow-x: hidden} .swal2-modal .swal2-content{text-align: justify}
+/*=	Media Query =*/
+@media screen and (max-width: 995px) {header .zoom{	display: inline-block;}}@media screen and (max-width: 768px){header .logo{	display: none;}}@media screen and (max-width: 640px) {.three-buttons{	float: right;}	header .zoom{	display: inline-block; width: 100%;float: none;    margin: 0;    box-sizing: border-box;    padding: 10px;}    .search {
+        width: 100%;    top: 108px;    max-width: 100%;} .search_txt{width: 100%;} .slide_close{top: 112px;}}@media screen and (max-width: 480px){.legend-panel{	right:30px;}}
+
